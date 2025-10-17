@@ -647,57 +647,86 @@
       "events": [
         {
           "name": "Abstract Deadline",
-          "date": "2026-01-23",
+          "date": "2025-01-23",
           "type": "deadline",
-          "tentative": true,
-          "source": "Estimated based on ICML 2025 pattern (6 days before full paper)",
+          "source": "ICML 2026 organizers message",
           "footnote": 4
         },
         {
-          "name": "Full Paper Deadline",
-          "date": "2026-01-29",
-          "type": "deadline",
-          "source": "User provided - Jan 29 2026 11:59AM UTC-0",
-          "footnote": 4
-        },
-        {
-          "name": "Review Release Date",
-          "date": "2026-03-24",
+          "name": "Reviewer Bidding Begins",
+          "date": "2025-01-27",
           "type": "review",
-          "tentative": true,
-          "source": "Estimated (8 weeks after submission, based on ICML 2025)",
+          "source": "ICML 2026 organizers message",
+          "footnote": 4
+        },
+        {
+          "name": "Submission Deadline",
+          "date": "2025-01-30",
+          "type": "deadline",
+          "source": "ICML 2026 organizers message",
+          "footnote": 4
+        },
+        {
+          "name": "Reviewer Bidding Ends",
+          "date": "2025-02-03",
+          "type": "review",
+          "source": "ICML 2026 organizers message",
+          "footnote": 4
+        },
+        {
+          "name": "Reviewing Begins",
+          "date": "2025-02-13",
+          "type": "review",
+          "source": "ICML 2026 organizers message",
+          "footnote": 4
+        },
+        {
+          "name": "Reviewing Ends",
+          "date": "2025-03-13",
+          "type": "review",
+          "source": "ICML 2026 organizers message",
+          "footnote": 4
+        },
+        {
+          "name": "Review Release to Authors",
+          "date": "2025-03-25",
+          "type": "review",
+          "source": "ICML 2026 organizers message",
           "footnote": 4
         },
         {
           "name": "Rebuttal Period Start",
-          "date": "2026-03-24",
+          "date": "2025-03-25",
           "type": "review",
-          "tentative": true,
-          "source": "Estimated (same day as review release)",
+          "source": "ICML 2026 organizers message",
           "footnote": 4
         },
         {
           "name": "Rebuttal Period End",
-          "date": "2026-03-31",
+          "date": "2025-03-31",
           "type": "review",
-          "tentative": true,
-          "source": "Estimated (1 week rebuttal period, based on ICML 2025)",
+          "source": "ICML 2026 organizers message",
+          "footnote": 4
+        },
+        {
+          "name": "Author-Reviewer Discussion Period Start",
+          "date": "2025-04-01",
+          "type": "review",
+          "source": "ICML 2026 organizers message",
+          "footnote": 4
+        },
+        {
+          "name": "Author-Reviewer Discussion Period End",
+          "date": "2025-04-08",
+          "type": "review",
+          "source": "ICML 2026 organizers message",
           "footnote": 4
         },
         {
           "name": "Notification Date",
-          "date": "2026-04-29",
+          "date": "2025-05-01",
           "type": "notification",
-          "tentative": true,
-          "source": "Estimated (3 months after submission, based on ICML 2025)",
-          "footnote": 4
-        },
-        {
-          "name": "Camera-Ready Deadline",
-          "date": "2026-05-29",
-          "type": "deadline",
-          "tentative": true,
-          "source": "Estimated (1 month after notification)",
+          "source": "ICML 2026 organizers message",
           "footnote": 4
         },
         {
@@ -715,7 +744,7 @@
           "footnote": 5
         }
       ],
-      "note": "Submission deadline confirmed. Other dates estimated based on ICML 2025 timeline"
+      "note": "Official dates from ICML 2026 organizers"
     },
     {
       "name": "NeurIPS 2026",
