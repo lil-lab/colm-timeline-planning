@@ -299,8 +299,8 @@
         }
 
         function formatDate(dateString) {
-            const date = new Date(dateString);
-            return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+            const date = new Date(dateString + 'T12:00:00Z');
+            return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
         }
 
         function renderGanttChart(conferences) {
@@ -373,11 +373,11 @@
                         // Split into reviewing period (before rebuttal) and committee discussion (after rebuttal)
 
                         // Reviewing period: submission to rebuttal start
-                        const reviewStartDateObj = new Date(submissionDeadline.date);
-                        const reviewEndDateObj = new Date(rebuttalStart.date);
+                        const reviewStartDateObj = new Date(submissionDeadline.date + 'T12:00:00Z');
+                        const reviewEndDateObj = new Date(rebuttalStart.date + 'T12:00:00Z');
                         const reviewDays = Math.round((reviewEndDateObj - reviewStartDateObj) / (1000 * 60 * 60 * 24));
-                        const reviewStartDate = reviewStartDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-                        const reviewEndDate = reviewEndDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                        const reviewStartDate = reviewStartDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+                        const reviewEndDate = reviewEndDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
                         const reviewTentative = submissionDeadline.tentative || rebuttalStart.tentative;
 
                         items.push({
@@ -393,11 +393,11 @@
                         });
 
                         // Committee discussion: rebuttal end to notification
-                        const discussionStartDateObj = new Date(rebuttalEnd.date);
-                        const discussionEndDateObj = new Date(notification.date);
+                        const discussionStartDateObj = new Date(rebuttalEnd.date + 'T12:00:00Z');
+                        const discussionEndDateObj = new Date(notification.date + 'T12:00:00Z');
                         const discussionDays = Math.round((discussionEndDateObj - discussionStartDateObj) / (1000 * 60 * 60 * 24));
-                        const discussionStartDate = discussionStartDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-                        const discussionEndDate = discussionEndDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                        const discussionStartDate = discussionStartDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+                        const discussionEndDate = discussionEndDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
                         const discussionTentative = rebuttalEnd.tentative || notification.tentative;
 
                         items.push({
@@ -414,11 +414,11 @@
                     } else {
                         // No rebuttal period, show single review period
                         const isTentative = submissionDeadline.tentative || notification.tentative;
-                        const startDateObj = new Date(submissionDeadline.date);
-                        const endDateObj = new Date(notification.date);
+                        const startDateObj = new Date(submissionDeadline.date + 'T12:00:00Z');
+                        const endDateObj = new Date(notification.date + 'T12:00:00Z');
                         const days = Math.round((endDateObj - startDateObj) / (1000 * 60 * 60 * 24));
-                        const startDate = startDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-                        const endDate = endDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                        const startDate = startDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+                        const endDate = endDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
                         items.push({
                             id: `${conf.name}-review`,
                             group: groupIndex,
@@ -436,11 +436,11 @@
                 // Create rebuttal/discussion period bar
                 if (rebuttalStart && rebuttalEnd) {
                     const isTentative = rebuttalStart.tentative || rebuttalEnd.tentative;
-                    const startDateObj = new Date(rebuttalStart.date);
-                    const endDateObj = new Date(rebuttalEnd.date);
+                    const startDateObj = new Date(rebuttalStart.date + 'T12:00:00Z');
+                    const endDateObj = new Date(rebuttalEnd.date + 'T12:00:00Z');
                     const days = Math.round((endDateObj - startDateObj) / (1000 * 60 * 60 * 24));
-                    const startDate = startDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-                    const endDate = endDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                    const startDate = startDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+                    const endDate = endDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
                     items.push({
                         id: `${conf.name}-rebuttal`,
                         group: groupIndex,
@@ -454,11 +454,11 @@
                     });
                 } else if (rebuttalStart && !rebuttalEnd) {
                     // If we only have a rebuttal start date (like a single-day event)
-                    const eventDate = new Date(rebuttalStart.date);
+                    const eventDate = new Date(rebuttalStart.date + 'T12:00:00Z');
                     const endDate = new Date(eventDate);
                     endDate.setDate(endDate.getDate() + 7); // Assume 1 week if no end date
-                    const startDateStr = eventDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-                    const endDateStr = endDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                    const startDateStr = eventDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+                    const endDateStr = endDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
                     items.push({
                         id: `${conf.name}-rebuttal`,
                         group: groupIndex,
@@ -486,11 +486,11 @@
                         if (endEvent) {
                             const color = getEventColor(event);
                             const isTentative = event.tentative || endEvent.tentative;
-                            const startDateObj = new Date(event.date);
-                            const endDateObj = new Date(endEvent.date);
+                            const startDateObj = new Date(event.date + 'T12:00:00Z');
+                            const endDateObj = new Date(endEvent.date + 'T12:00:00Z');
                             const days = Math.round((endDateObj - startDateObj) / (1000 * 60 * 60 * 24)) + 1; // +1 to include both start and end days
-                            const startDate = startDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-                            const endDate = endDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                            const startDate = startDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+                            const endDate = endDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
                             items.push({
                                 id: `${conf.name}-conference`,
                                 group: groupIndex,
@@ -516,11 +516,11 @@
                     }
 
                     // Create box markers for all remaining events
-                    const eventDate = new Date(event.date);
+                    const eventDate = new Date(event.date + 'T12:00:00Z'); // Parse as UTC noon to avoid timezone issues
                     const endDate = new Date(eventDate);
                     endDate.setDate(endDate.getDate() + 1); // 1 day width
                     const color = getEventColor(event);
-                    const dateStr = eventDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                    const dateStr = eventDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 
                     items.push({
                         id: `${conf.name}-${event.type}-${eventIndex}`,
