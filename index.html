@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025-2026 ML/LM/NLP Conference Timeline</title>
+    <script src="https://unpkg.com/vis-timeline@7.7.3/standalone/umd/vis-timeline-graph2d.min.js"></script>
+    <link href="https://unpkg.com/vis-timeline@7.7.3/styles/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .chart-container {
+            padding: 40px;
+            position: relative;
+            height: 600px;
+        }
+
+        #ganttChart {
+            height: 100%;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+        }
+
+        .legend {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px 40px;
+            background: #f8f9fa;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9em;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+
+        .footnotes {
+            padding: 40px;
+            background: #f8f9fa;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .footnotes h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .footnote {
+            margin-bottom: 15px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.2s;
+        }
+
+        .footnote:hover {
+            transform: translateX(5px);
+        }
+
+        .footnote-number {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: #667eea;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .footnote a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footnote a:hover {
+            text-decoration: underline;
+        }
+
+        .note {
+            padding: 20px 40px;
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            margin: 0 40px 40px;
+            border-radius: 8px;
+        }
+
+        .note strong {
+            color: #856404;
+        }
+
+        .conference-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .conference-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s;
+        }
+
+        .conference-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .conference-card h3 {
+            color: #667eea;
+            margin-bottom: 5px;
+            font-size: 1.3em;
+        }
+
+        .conference-card .full-name {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .conference-card .location {
+            color: #333;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .conference-card .dates {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .tentative-badge {
+            display: inline-block;
+            background: #ffc107;
+            color: #856404;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75em;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>2025-2026 ML/LM/NLP Conference Timeline</h1>
+            <p class="subtitle">Track submission deadlines, review periods, and conference dates</p>
+        </header>
+
+        <div style="background: #fee2e2; border: 3px solid #dc2626; border-radius: 8px; padding: 20px 40px; margin: 20px 40px; text-align: center;">
+            <div style="color: #dc2626; font-size: 1.8em; font-weight: bold; margin-bottom: 10px;">⚠️ WARNING ⚠️</div>
+            <div style="color: #991b1b; font-size: 1.2em; font-weight: bold;">
+                This content is LLM-generated and has NOT been verified. Information may be incomplete, inaccurate, or outdated.
+                Always verify dates and deadlines with official conference websites before making any decisions.
+            </div>
+        </div>
+
+        <div class="note">
+            <strong>Note:</strong> Some conferences have not yet announced official dates. Dates marked as "tentative" are estimates based on historical patterns and unofficial sources. Please check official conference websites for the most up-to-date information.
+        </div>
+
+        <div class="conference-info" id="conferenceInfo"></div>
+
+        <div class="chart-container">
+            <div id="ganttChart"></div>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background: #ef4444;"></div>
+                <span>Submission Deadlines</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #9333ea;"></div>
+                <span>Commitment Deadlines</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #f97316;"></div>
+                <span>Camera-Ready Deadlines</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: rgba(245, 158, 11, 0.5);"></div>
+                <span>Review Periods</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: rgba(236, 72, 153, 0.5);"></div>
+                <span>Rebuttal/Discussion Periods</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #10b981;"></div>
+                <span>Notifications</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #3b82f6;"></div>
+                <span>Conference Dates</span>
+            </div>
+        </div>
+
+        <div class="footnotes">
+            <h2>Sources & References</h2>
+            <div id="footnotesList"></div>
+        </div>
+    </div>
+
+    <script>
+        // Load conference data
+        fetch('conferences_2026.json')
+            .then(response => response.json())
+            .then(data => {
+                renderConferenceInfo(data.conferences);
+                renderGanttChart(data.conferences);
+                renderFootnotes(data.footnotes);
+            })
+            .catch(error => console.error('Error loading data:', error));
+
+        function renderConferenceInfo(conferences) {
+            const container = document.getElementById('conferenceInfo');
+            conferences.forEach(conf => {
+                const card = document.createElement('div');
+                card.className = 'conference-card';
+
+                const confDates = conf.events.filter(e => e.type === 'conference');
+                const dateRange = confDates.length >= 2
+                    ? `${formatDate(confDates[0].date)} - ${formatDate(confDates[confDates.length - 1].date)}`
+                    : confDates.length === 1
+                    ? formatDate(confDates[0].date)
+                    : 'TBD';
+
+                card.innerHTML = `
+                    <h3>${conf.name}</h3>
+                    <div class="full-name">${conf.fullName}</div>
+                    <div class="location">📍 ${conf.location}</div>
+                    <div class="dates">📅 ${dateRange}</div>
+                    ${conf.note ? `<div style="margin-top: 10px; font-size: 0.85em; color: #856404; font-style: italic;">${conf.note}</div>` : ''}
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        }
+
+        function renderGanttChart(conferences) {
+            const container = document.getElementById('ganttChart');
+
+            // Sort conferences chronologically by their first event
+            const sortedConferences = [...conferences].sort((a, b) => {
+                const aFirstDate = new Date(a.events[0].date);
+                const bFirstDate = new Date(b.events[0].date);
+                return aFirstDate - bFirstDate;
+            });
+
+            // Create groups for each conference
+            const groups = sortedConferences.map((conf, index) => ({
+                id: index,
+                content: conf.name
+            }));
+
+            // Create items for timeline
+            const items = [];
+
+            // Function to determine color based on event type and name
+            function getEventColor(event) {
+                if (event.type === 'conference') return '#3b82f6';
+                if (event.type === 'notification') return '#10b981';
+                if (event.type === 'review') return '#f59e0b';
+
+                // Different colors for different types of deadlines
+                if (event.type === 'deadline') {
+                    const name = event.name.toLowerCase();
+                    if (name.includes('submission') || name.includes('abstract') || name.includes('full paper')) {
+                        return '#ef4444'; // Red for submission deadlines
+                    } else if (name.includes('commitment')) {
+                        return '#9333ea'; // Purple for commitment deadlines
+                    } else if (name.includes('camera-ready')) {
+                        return '#f97316'; // Orange for camera-ready
+                    } else {
+                        return '#dc2626'; // Dark red for other deadlines
+                    }
+                }
+
+                return '#6b7280'; // Gray fallback
+            }
+
+            sortedConferences.forEach((conf, groupIndex) => {
+                // Find key dates for review period
+                const submissionDeadline = conf.events.find(e =>
+                    e.type === 'deadline' &&
+                    (e.name.includes('Full Paper') || e.name.includes('Submission') || e.name.includes('ARR Submission'))
+                );
+                const notification = conf.events.find(e => e.type === 'notification');
+
+                // Find rebuttal/author response period
+                const rebuttalStart = conf.events.find(e =>
+                    e.type === 'review' &&
+                    (e.name.includes('Rebuttal Period Start') || e.name.includes('Author Response Start') || e.name.includes('Author Response Period'))
+                );
+                const rebuttalEnd = conf.events.find(e =>
+                    e.type === 'review' &&
+                    (e.name.includes('Rebuttal Period End') || e.name.includes('Author Response End'))
+                );
+
+                // Create review period bars - split if there's a rebuttal period
+                if (submissionDeadline && notification) {
+                    if (rebuttalStart && rebuttalEnd) {
+                        // Split into reviewing period (before rebuttal) and committee discussion (after rebuttal)
+
+                        // Reviewing period: submission to rebuttal start
+                        const reviewStartDateObj = new Date(submissionDeadline.date);
+                        const reviewEndDateObj = new Date(rebuttalStart.date);
+                        const reviewDays = Math.round((reviewEndDateObj - reviewStartDateObj) / (1000 * 60 * 60 * 24));
+                        const reviewStartDate = reviewStartDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                        const reviewEndDate = reviewEndDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                        const reviewTentative = submissionDeadline.tentative || rebuttalStart.tentative;
+
+                        items.push({
+                            id: `${conf.name}-reviewing`,
+                            group: groupIndex,
+                            content: '',
+                            title: `Reviewing (${reviewDays} days)` + (reviewTentative ? ' *' : '') + `\n${reviewStartDate} - ${reviewEndDate}`,
+                            start: submissionDeadline.date,
+                            end: rebuttalStart.date,
+                            type: 'range',
+                            className: 'reviewing-period',
+                            style: `background-color: rgba(245, 158, 11, 0.3); border-color: #f59e0b; border-width: 2px;`
+                        });
+
+                        // Committee discussion: rebuttal end to notification
+                        const discussionStartDateObj = new Date(rebuttalEnd.date);
+                        const discussionEndDateObj = new Date(notification.date);
+                        const discussionDays = Math.round((discussionEndDateObj - discussionStartDateObj) / (1000 * 60 * 60 * 24));
+                        const discussionStartDate = discussionStartDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                        const discussionEndDate = discussionEndDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                        const discussionTentative = rebuttalEnd.tentative || notification.tentative;
+
+                        items.push({
+                            id: `${conf.name}-committee-discussion`,
+                            group: groupIndex,
+                            content: '',
+                            title: `Committee Discussion (${discussionDays} days)` + (discussionTentative ? ' *' : '') + `\n${discussionStartDate} - ${discussionEndDate}`,
+                            start: rebuttalEnd.date,
+                            end: notification.date,
+                            type: 'range',
+                            className: 'committee-discussion-period',
+                            style: `background-color: rgba(245, 158, 11, 0.3); border-color: #f59e0b; border-width: 2px;`
+                        });
+                    } else {
+                        // No rebuttal period, show single review period
+                        const isTentative = submissionDeadline.tentative || notification.tentative;
+                        const startDateObj = new Date(submissionDeadline.date);
+                        const endDateObj = new Date(notification.date);
+                        const days = Math.round((endDateObj - startDateObj) / (1000 * 60 * 60 * 24));
+                        const startDate = startDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                        const endDate = endDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                        items.push({
+                            id: `${conf.name}-review`,
+                            group: groupIndex,
+                            content: '',
+                            title: `Review Period (${days} days)` + (isTentative ? ' *' : '') + `\n${startDate} - ${endDate}`,
+                            start: submissionDeadline.date,
+                            end: notification.date,
+                            type: 'range',
+                            className: 'review-period',
+                            style: `background-color: rgba(245, 158, 11, 0.3); border-color: #f59e0b; border-width: 2px;`
+                        });
+                    }
+                }
+
+                // Create rebuttal/discussion period bar
+                if (rebuttalStart && rebuttalEnd) {
+                    const isTentative = rebuttalStart.tentative || rebuttalEnd.tentative;
+                    const startDateObj = new Date(rebuttalStart.date);
+                    const endDateObj = new Date(rebuttalEnd.date);
+                    const days = Math.round((endDateObj - startDateObj) / (1000 * 60 * 60 * 24));
+                    const startDate = startDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                    const endDate = endDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                    items.push({
+                        id: `${conf.name}-rebuttal`,
+                        group: groupIndex,
+                        content: '',
+                        title: `Rebuttal/Discussion Period (${days} days)` + (isTentative ? ' *' : '') + `\n${startDate} - ${endDate}`,
+                        start: rebuttalStart.date,
+                        end: rebuttalEnd.date,
+                        type: 'range',
+                        className: 'rebuttal-period',
+                        style: `background-color: rgba(236, 72, 153, 0.4); border-color: #ec4899; border-width: 2px;`
+                    });
+                } else if (rebuttalStart && !rebuttalEnd) {
+                    // If we only have a rebuttal start date (like a single-day event)
+                    const eventDate = new Date(rebuttalStart.date);
+                    const endDate = new Date(eventDate);
+                    endDate.setDate(endDate.getDate() + 7); // Assume 1 week if no end date
+                    const startDateStr = eventDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                    const endDateStr = endDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                    items.push({
+                        id: `${conf.name}-rebuttal`,
+                        group: groupIndex,
+                        content: '',
+                        title: (rebuttalStart.name || 'Rebuttal Period') + ' (7 days)' + (rebuttalStart.tentative ? ' *' : '') + `\n${startDateStr} - ${endDateStr}`,
+                        start: rebuttalStart.date,
+                        end: endDate.toISOString().split('T')[0],
+                        type: 'range',
+                        className: 'rebuttal-period',
+                        style: `background-color: rgba(236, 72, 153, 0.4); border-color: #ec4899; border-width: 2px;`
+                    });
+                }
+
+                // Track which events we've already rendered
+                const renderedEvents = new Set();
+
+                // Mark rebuttal events as rendered if we created a bar for them
+                if (rebuttalStart) renderedEvents.add(rebuttalStart.name);
+                if (rebuttalEnd) renderedEvents.add(rebuttalEnd.name);
+
+                conf.events.forEach((event, eventIndex) => {
+                    // For conference dates, create bars spanning start to end
+                    if (event.type === 'conference' && event.name.includes('Start')) {
+                        const endEvent = conf.events.find(e => e.type === 'conference' && e.name.includes('End'));
+                        if (endEvent) {
+                            const color = getEventColor(event);
+                            const isTentative = event.tentative || endEvent.tentative;
+                            const startDateObj = new Date(event.date);
+                            const endDateObj = new Date(endEvent.date);
+                            const days = Math.round((endDateObj - startDateObj) / (1000 * 60 * 60 * 24)) + 1; // +1 to include both start and end days
+                            const startDate = startDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                            const endDate = endDateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                            items.push({
+                                id: `${conf.name}-conference`,
+                                group: groupIndex,
+                                content: '',
+                                title: `Conference (${days} days)` + (isTentative ? ' *' : '') + `\n${startDate} - ${endDate}`,
+                                start: event.date,
+                                end: endEvent.date,
+                                type: 'range',
+                                style: `background-color: ${color}; border-color: ${color};`
+                            });
+                            // Mark both start and end as rendered
+                            renderedEvents.add(event.name);
+                            renderedEvents.add(endEvent.name);
+                        }
+                    }
+                });
+
+                // Render all other events (deadlines, notifications, review events)
+                conf.events.forEach((event, eventIndex) => {
+                    // Skip if already rendered as part of conference range
+                    if (renderedEvents.has(event.name)) {
+                        return;
+                    }
+
+                    // Create box markers for all remaining events
+                    const eventDate = new Date(event.date);
+                    const endDate = new Date(eventDate);
+                    endDate.setDate(endDate.getDate() + 1); // 1 day width
+                    const color = getEventColor(event);
+                    const dateStr = eventDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+
+                    items.push({
+                        id: `${conf.name}-${event.type}-${eventIndex}`,
+                        group: groupIndex,
+                        content: '',
+                        title: event.name + (event.tentative ? ' *' : '') + `\n${dateStr}`,
+                        start: event.date,
+                        end: endDate.toISOString().split('T')[0],
+                        type: 'range',
+                        className: event.type,
+                        style: `background-color: ${color}; border-color: ${color};`
+                    });
+                });
+            });
+
+            // Create the timeline
+            const options = {
+                stack: false,
+                start: '2024-09-01',
+                end: '2027-01-01',
+                orientation: 'top',
+                showCurrentTime: true,
+                zoomMin: 1000 * 60 * 60 * 24 * 30, // 1 month
+                zoomMax: 1000 * 60 * 60 * 24 * 365 * 3, // 3 years
+                margin: {
+                    item: 10,
+                    axis: 5
+                },
+                tooltip: {
+                    followMouse: true,
+                    overflowMethod: 'cap'
+                }
+            };
+
+            const timeline = new vis.Timeline(container, items, groups, options);
+        }
+
+        function renderFootnotes(footnotes) {
+            const container = document.getElementById('footnotesList');
+            footnotes.forEach(footnote => {
+                const div = document.createElement('div');
+                div.className = 'footnote';
+                div.innerHTML = `
+                    <span class="footnote-number">${footnote.id}</span>
+                    <strong>${footnote.text}:</strong>
+                    <a href="${footnote.url}" target="_blank">${footnote.url}</a>
+                `;
+                container.appendChild(div);
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,851 @@
+{
+  "conferences": [
+    {
+      "name": "ICLR 2025",
+      "fullName": "International Conference on Learning Representations",
+      "location": "Singapore",
+      "events": [
+        {
+          "name": "Abstract Deadline",
+          "date": "2024-09-27",
+          "type": "deadline",
+          "source": "https://iclr.cc/Conferences/2025/Dates",
+          "footnote": 10
+        },
+        {
+          "name": "Full Paper Deadline",
+          "date": "2024-10-01",
+          "type": "deadline",
+          "source": "https://iclr.cc/Conferences/2025/Dates",
+          "footnote": 10
+        },
+        {
+          "name": "Notification Date",
+          "date": "2025-01-22",
+          "type": "notification",
+          "source": "https://iclr.cc/Conferences/2025/Dates",
+          "footnote": 10
+        },
+        {
+          "name": "Conference Start",
+          "date": "2025-04-24",
+          "type": "conference",
+          "source": "https://iclr.cc/Conferences/2025/Dates",
+          "footnote": 10
+        },
+        {
+          "name": "Conference End",
+          "date": "2025-04-28",
+          "type": "conference",
+          "source": "https://iclr.cc/Conferences/2025/Dates",
+          "footnote": 10
+        }
+      ]
+    },
+    {
+      "name": "NAACL 2025",
+      "fullName": "Nations of the Americas Chapter of the ACL",
+      "location": "Albuquerque, New Mexico",
+      "events": [
+        {
+          "name": "ARR Submission Deadline",
+          "date": "2024-10-15",
+          "type": "deadline",
+          "source": "https://2025.naacl.org/",
+          "footnote": 11
+        },
+        {
+          "name": "Camera-Ready Deadline",
+          "date": "2025-02-08",
+          "type": "deadline",
+          "source": "https://2025.naacl.org/",
+          "footnote": 11
+        },
+        {
+          "name": "Conference Start",
+          "date": "2025-04-30",
+          "type": "conference",
+          "source": "https://2025.naacl.org/",
+          "footnote": 11
+        },
+        {
+          "name": "Conference End",
+          "date": "2025-05-04",
+          "type": "conference",
+          "source": "https://2025.naacl.org/",
+          "footnote": 11
+        }
+      ]
+    },
+    {
+      "name": "ICML 2025",
+      "fullName": "International Conference on Machine Learning",
+      "location": "Vancouver, Canada",
+      "events": [
+        {
+          "name": "Abstract Deadline",
+          "date": "2025-01-24",
+          "type": "deadline",
+          "source": "https://icml.cc/Conferences/2025/Dates",
+          "footnote": 12
+        },
+        {
+          "name": "Full Paper Deadline",
+          "date": "2025-01-31",
+          "type": "deadline",
+          "source": "https://icml.cc/Conferences/2025/Dates",
+          "footnote": 12
+        },
+        {
+          "name": "Review Release Date",
+          "date": "2025-03-25",
+          "type": "review",
+          "source": "https://icml.cc/Conferences/2025/Dates",
+          "footnote": 12
+        },
+        {
+          "name": "Rebuttal Deadline",
+          "date": "2025-04-01",
+          "type": "review",
+          "source": "https://icml.cc/Conferences/2025/Dates",
+          "footnote": 12
+        },
+        {
+          "name": "Notification Date",
+          "date": "2025-05-01",
+          "type": "notification",
+          "source": "https://icml.cc/Conferences/2025/Dates",
+          "footnote": 12
+        },
+        {
+          "name": "Conference Start",
+          "date": "2025-07-13",
+          "type": "conference",
+          "source": "https://icml.cc/Conferences/2025/Dates",
+          "footnote": 12
+        },
+        {
+          "name": "Conference End",
+          "date": "2025-07-19",
+          "type": "conference",
+          "source": "https://icml.cc/Conferences/2025/Dates",
+          "footnote": 12
+        }
+      ]
+    },
+    {
+      "name": "ACL 2025",
+      "fullName": "Association for Computational Linguistics",
+      "location": "Vienna, Austria",
+      "events": [
+        {
+          "name": "Submission Deadline",
+          "date": "2025-02-15",
+          "type": "deadline",
+          "source": "https://2025.aclweb.org/",
+          "footnote": 13
+        },
+        {
+          "name": "Notification Date",
+          "date": "2025-05-15",
+          "type": "notification",
+          "source": "https://2025.aclweb.org/",
+          "footnote": 13
+        },
+        {
+          "name": "Conference Start",
+          "date": "2025-07-27",
+          "type": "conference",
+          "source": "https://2025.aclweb.org/",
+          "footnote": 13
+        },
+        {
+          "name": "Conference End",
+          "date": "2025-08-01",
+          "type": "conference",
+          "source": "https://2025.aclweb.org/",
+          "footnote": 13
+        }
+      ]
+    },
+    {
+      "name": "COLM 2025",
+      "fullName": "Conference on Language Modeling",
+      "location": "Montreal, Canada",
+      "events": [
+        {
+          "name": "Abstract Deadline",
+          "date": "2025-03-22",
+          "type": "deadline",
+          "source": "https://colmweb.org/dates.html",
+          "footnote": 14
+        },
+        {
+          "name": "Full Paper Deadline",
+          "date": "2025-03-28",
+          "type": "deadline",
+          "source": "https://colmweb.org/dates.html",
+          "footnote": 14
+        },
+        {
+          "name": "Rebuttal Period Start",
+          "date": "2025-05-27",
+          "type": "review",
+          "source": "https://colmweb.org/dates.html",
+          "footnote": 14
+        },
+        {
+          "name": "Rebuttal Period End",
+          "date": "2025-06-10",
+          "type": "review",
+          "source": "https://colmweb.org/dates.html",
+          "footnote": 14
+        },
+        {
+          "name": "Notification Date",
+          "date": "2025-07-07",
+          "type": "notification",
+          "source": "https://colmweb.org/dates.html",
+          "footnote": 14
+        },
+        {
+          "name": "Conference Start",
+          "date": "2025-10-07",
+          "type": "conference",
+          "source": "https://colmweb.org/dates.html",
+          "footnote": 14
+        },
+        {
+          "name": "Conference End",
+          "date": "2025-10-10",
+          "type": "conference",
+          "source": "https://colmweb.org/dates.html",
+          "footnote": 14
+        }
+      ]
+    },
+    {
+      "name": "EMNLP 2025",
+      "fullName": "Empirical Methods in Natural Language Processing",
+      "location": "Suzhou, China",
+      "events": [
+        {
+          "name": "ARR Submission Deadline",
+          "date": "2025-05-19",
+          "type": "deadline",
+          "source": "https://2025.emnlp.org/",
+          "footnote": 15
+        },
+        {
+          "name": "EMNLP Commitment Deadline",
+          "date": "2025-07-31",
+          "type": "deadline",
+          "source": "https://2025.emnlp.org/",
+          "footnote": 15
+        },
+        {
+          "name": "Notification Date",
+          "date": "2025-08-20",
+          "type": "notification",
+          "source": "https://2025.emnlp.org/",
+          "footnote": 15
+        },
+        {
+          "name": "Camera-Ready Deadline",
+          "date": "2025-09-19",
+          "type": "deadline",
+          "source": "https://2025.emnlp.org/",
+          "footnote": 15
+        },
+        {
+          "name": "Conference Start",
+          "date": "2025-11-05",
+          "type": "conference",
+          "source": "https://2025.emnlp.org/",
+          "footnote": 15
+        },
+        {
+          "name": "Conference End",
+          "date": "2025-11-09",
+          "type": "conference",
+          "source": "https://2025.emnlp.org/",
+          "footnote": 15
+        }
+      ]
+    },
+    {
+      "name": "NeurIPS 2025",
+      "fullName": "Neural Information Processing Systems",
+      "location": "San Diego, California",
+      "events": [
+        {
+          "name": "Full Paper Deadline",
+          "date": "2025-05-15",
+          "type": "deadline",
+          "source": "https://neurips.cc/Conferences/2025/Dates",
+          "footnote": 16
+        },
+        {
+          "name": "Conference Start",
+          "date": "2025-11-30",
+          "type": "conference",
+          "source": "https://neurips.cc/Conferences/2025/Dates",
+          "footnote": 16
+        },
+        {
+          "name": "Conference End",
+          "date": "2025-12-07",
+          "type": "conference",
+          "source": "https://neurips.cc/Conferences/2025/Dates",
+          "footnote": 16
+        }
+      ]
+    },
+    {
+      "name": "ICLR 2026",
+      "fullName": "International Conference on Learning Representations",
+      "location": "Rio de Janeiro, Brazil",
+      "events": [
+        {
+          "name": "Abstract Deadline",
+          "date": "2025-09-19",
+          "type": "deadline",
+          "source": "https://iclr.cc/Conferences/2026/Dates",
+          "footnote": 1
+        },
+        {
+          "name": "Full Paper Deadline",
+          "date": "2025-09-24",
+          "type": "deadline",
+          "source": "https://iclr.cc/Conferences/2026/Dates",
+          "footnote": 1
+        },
+        {
+          "name": "Rebuttal Period Start",
+          "date": "2025-11-11",
+          "type": "review",
+          "source": "https://iclr.cc/Conferences/2026/Dates",
+          "footnote": 1
+        },
+        {
+          "name": "Rebuttal Period End",
+          "date": "2025-12-03",
+          "type": "review",
+          "source": "https://iclr.cc/Conferences/2026/Dates",
+          "footnote": 1
+        },
+        {
+          "name": "Notification Date",
+          "date": "2026-01-22",
+          "type": "notification",
+          "source": "https://iclr.cc/Conferences/2026/Dates",
+          "footnote": 1
+        },
+        {
+          "name": "Conference Start",
+          "date": "2026-04-24",
+          "type": "conference",
+          "source": "https://iclr.cc/Conferences/2026/Dates",
+          "footnote": 1
+        },
+        {
+          "name": "Conference End",
+          "date": "2026-04-28",
+          "type": "conference",
+          "source": "https://iclr.cc/Conferences/2026/Dates",
+          "footnote": 1
+        }
+      ]
+    },
+    {
+      "name": "COLM 2026",
+      "fullName": "Conference on Language Modeling",
+      "location": "TBD",
+      "events": [
+        {
+          "name": "Abstract Deadline",
+          "date": "2026-03-22",
+          "type": "deadline",
+          "tentative": true,
+          "source": "https://colmweb.org/dates.html",
+          "footnote": 9
+        },
+        {
+          "name": "Full Paper Deadline",
+          "date": "2026-03-28",
+          "type": "deadline",
+          "tentative": true,
+          "source": "https://colmweb.org/dates.html",
+          "footnote": 9
+        },
+        {
+          "name": "Rebuttal Period Start",
+          "date": "2026-05-27",
+          "type": "review",
+          "tentative": true,
+          "source": "https://colmweb.org/dates.html",
+          "footnote": 9
+        },
+        {
+          "name": "Rebuttal Period End",
+          "date": "2026-06-10",
+          "type": "review",
+          "tentative": true,
+          "source": "https://colmweb.org/dates.html",
+          "footnote": 9
+        },
+        {
+          "name": "Notification Date",
+          "date": "2026-07-07",
+          "type": "notification",
+          "tentative": true,
+          "source": "https://colmweb.org/dates.html",
+          "footnote": 9
+        },
+        {
+          "name": "Camera-Ready Deadline",
+          "date": "2026-08-07",
+          "type": "deadline",
+          "tentative": true,
+          "source": "https://colmweb.org/dates.html",
+          "footnote": 9
+        },
+        {
+          "name": "Conference Start",
+          "date": "2026-10-07",
+          "type": "conference",
+          "tentative": true,
+          "source": "https://colmweb.org/dates.html",
+          "footnote": 9
+        },
+        {
+          "name": "Conference End",
+          "date": "2026-10-09",
+          "type": "conference",
+          "tentative": true,
+          "source": "https://colmweb.org/dates.html",
+          "footnote": 9
+        }
+      ],
+      "note": "Dates based on COLM 2025 schedule, official 2026 dates not yet announced"
+    },
+    {
+      "name": "EACL 2026",
+      "fullName": "European Chapter of the Association for Computational Linguistics",
+      "location": "Rabat, Morocco",
+      "events": [
+        {
+          "name": "ARR Submission Deadline",
+          "date": "2025-10-06",
+          "type": "deadline",
+          "source": "https://2026.eacl.org/calls/papers/",
+          "footnote": 2
+        },
+        {
+          "name": "Author Response Start",
+          "date": "2025-11-18",
+          "type": "review",
+          "source": "https://2026.eacl.org/calls/papers/",
+          "footnote": 2
+        },
+        {
+          "name": "Author Response End",
+          "date": "2025-11-24",
+          "type": "review",
+          "source": "https://2026.eacl.org/calls/papers/",
+          "footnote": 2
+        },
+        {
+          "name": "Meta-reviews Released",
+          "date": "2025-12-11",
+          "type": "review",
+          "source": "https://2026.eacl.org/calls/papers/",
+          "footnote": 2
+        },
+        {
+          "name": "EACL Commitment Deadline",
+          "date": "2025-12-14",
+          "type": "deadline",
+          "source": "https://2026.eacl.org/calls/papers/",
+          "footnote": 2
+        },
+        {
+          "name": "Notification Date",
+          "date": "2026-01-03",
+          "type": "notification",
+          "source": "https://2026.eacl.org/calls/papers/",
+          "footnote": 2
+        },
+        {
+          "name": "Conference Start",
+          "date": "2026-03-24",
+          "type": "conference",
+          "source": "https://2026.eacl.org/",
+          "footnote": 2
+        },
+        {
+          "name": "Conference End",
+          "date": "2026-03-29",
+          "type": "conference",
+          "source": "https://2026.eacl.org/",
+          "footnote": 2
+        }
+      ]
+    },
+    {
+      "name": "ACL 2026",
+      "fullName": "Association for Computational Linguistics",
+      "location": "San Diego, California",
+      "events": [
+        {
+          "name": "ARR Submission Deadline",
+          "date": "2026-01-05",
+          "type": "deadline",
+          "source": "https://2026.aclweb.org/calls/main_conference_papers/",
+          "footnote": 3
+        },
+        {
+          "name": "ARR Author Response Period",
+          "date": "2026-02-17",
+          "type": "review",
+          "tentative": true,
+          "source": "Estimated based on ARR cycle (6 weeks after submission)",
+          "footnote": 3
+        },
+        {
+          "name": "ARR Reviews Available",
+          "date": "2026-03-09",
+          "type": "review",
+          "source": "https://2026.aclweb.org/calls/main_conference_papers/",
+          "footnote": 3
+        },
+        {
+          "name": "ACL Commitment Deadline",
+          "date": "2026-03-14",
+          "type": "deadline",
+          "source": "https://2026.aclweb.org/calls/main_conference_papers/",
+          "footnote": 3
+        },
+        {
+          "name": "Notification Date",
+          "date": "2026-04-04",
+          "type": "notification",
+          "source": "https://2026.aclweb.org/calls/main_conference_papers/",
+          "footnote": 3
+        },
+        {
+          "name": "Camera-Ready Deadline",
+          "date": "2026-04-19",
+          "type": "deadline",
+          "source": "https://2026.aclweb.org/calls/main_conference_papers/",
+          "footnote": 3
+        },
+        {
+          "name": "Tutorials",
+          "date": "2026-07-02",
+          "type": "conference",
+          "source": "https://2026.aclweb.org/calls/main_conference_papers/",
+          "footnote": 3
+        },
+        {
+          "name": "Conference Start",
+          "date": "2026-07-03",
+          "type": "conference",
+          "source": "https://2026.aclweb.org/calls/main_conference_papers/",
+          "footnote": 3
+        },
+        {
+          "name": "Conference End",
+          "date": "2026-07-05",
+          "type": "conference",
+          "source": "https://2026.aclweb.org/calls/main_conference_papers/",
+          "footnote": 3
+        },
+        {
+          "name": "Workshops",
+          "date": "2026-07-06",
+          "type": "conference",
+          "source": "https://2026.aclweb.org/calls/main_conference_papers/",
+          "footnote": 3
+        }
+      ]
+    },
+    {
+      "name": "ICML 2026",
+      "fullName": "International Conference on Machine Learning",
+      "location": "Seoul, Korea",
+      "events": [
+        {
+          "name": "Abstract Deadline",
+          "date": "2026-01-23",
+          "type": "deadline",
+          "tentative": true,
+          "source": "Estimated based on ICML 2025 pattern (6 days before full paper)",
+          "footnote": 4
+        },
+        {
+          "name": "Full Paper Deadline",
+          "date": "2026-01-29",
+          "type": "deadline",
+          "source": "User provided - Jan 29 2026 11:59AM UTC-0",
+          "footnote": 4
+        },
+        {
+          "name": "Review Release Date",
+          "date": "2026-03-24",
+          "type": "review",
+          "tentative": true,
+          "source": "Estimated (8 weeks after submission, based on ICML 2025)",
+          "footnote": 4
+        },
+        {
+          "name": "Rebuttal Period Start",
+          "date": "2026-03-24",
+          "type": "review",
+          "tentative": true,
+          "source": "Estimated (same day as review release)",
+          "footnote": 4
+        },
+        {
+          "name": "Rebuttal Period End",
+          "date": "2026-03-31",
+          "type": "review",
+          "tentative": true,
+          "source": "Estimated (1 week rebuttal period, based on ICML 2025)",
+          "footnote": 4
+        },
+        {
+          "name": "Notification Date",
+          "date": "2026-04-29",
+          "type": "notification",
+          "tentative": true,
+          "source": "Estimated (3 months after submission, based on ICML 2025)",
+          "footnote": 4
+        },
+        {
+          "name": "Camera-Ready Deadline",
+          "date": "2026-05-29",
+          "type": "deadline",
+          "tentative": true,
+          "source": "Estimated (1 month after notification)",
+          "footnote": 4
+        },
+        {
+          "name": "Conference Start",
+          "date": "2026-07-06",
+          "type": "conference",
+          "source": "https://icml.cc/Conferences/2026/Dates",
+          "footnote": 5
+        },
+        {
+          "name": "Conference End",
+          "date": "2026-07-12",
+          "type": "conference",
+          "source": "https://icml.cc/Conferences/2026/Dates",
+          "footnote": 5
+        }
+      ],
+      "note": "Submission deadline confirmed. Other dates estimated based on ICML 2025 timeline"
+    },
+    {
+      "name": "NeurIPS 2026",
+      "fullName": "Neural Information Processing Systems",
+      "location": "TBD",
+      "events": [
+        {
+          "name": "Submission Deadline (estimated)",
+          "date": "2026-05-15",
+          "type": "deadline",
+          "tentative": true,
+          "source": "https://mlciv.com/ai-deadlines/conference/?id=neurips26",
+          "footnote": 6
+        },
+        {
+          "name": "Notification (estimated)",
+          "date": "2026-09-18",
+          "type": "notification",
+          "tentative": true,
+          "source": "https://mlciv.com/ai-deadlines/conference/?id=neurips26",
+          "footnote": 6
+        },
+        {
+          "name": "Conference Start (estimated)",
+          "date": "2026-12-06",
+          "type": "conference",
+          "tentative": true,
+          "source": "https://mlciv.com/ai-deadlines/conference/?id=neurips26",
+          "footnote": 6
+        },
+        {
+          "name": "Conference End (estimated)",
+          "date": "2026-12-12",
+          "type": "conference",
+          "tentative": true,
+          "source": "https://mlciv.com/ai-deadlines/conference/?id=neurips26",
+          "footnote": 6
+        }
+      ],
+      "note": "Official dates not yet announced, estimated based on historical patterns"
+    },
+    {
+      "name": "EMNLP 2026",
+      "fullName": "Empirical Methods in Natural Language Processing",
+      "location": "TBD",
+      "events": [
+        {
+          "name": "ARR Submission Deadline",
+          "date": "2026-06-15",
+          "type": "deadline",
+          "source": "Estimated based on conference dates",
+          "footnote": 7
+        },
+        {
+          "name": "ARR Reviews Complete",
+          "date": "2026-07-27",
+          "type": "review",
+          "source": "Estimated based on ARR cycle",
+          "footnote": 7
+        },
+        {
+          "name": "EMNLP Commitment Deadline",
+          "date": "2026-08-15",
+          "type": "deadline",
+          "source": "Estimated based on conference dates",
+          "footnote": 7
+        },
+        {
+          "name": "Notification Date",
+          "date": "2026-09-01",
+          "type": "notification",
+          "source": "Estimated based on conference dates",
+          "footnote": 7
+        },
+        {
+          "name": "Conference Start",
+          "date": "2026-10-22",
+          "type": "conference",
+          "source": "User provided",
+          "footnote": 7
+        },
+        {
+          "name": "Conference End",
+          "date": "2026-10-29",
+          "type": "conference",
+          "source": "User provided",
+          "footnote": 7
+        }
+      ],
+      "note": "Conference dates confirmed. ARR submission and review timeline estimated based on typical ARR cycle (6-8 weeks for reviews)"
+    },
+    {
+      "name": "AACL 2026",
+      "fullName": "Asia-Pacific Chapter of the Association for Computational Linguistics",
+      "location": "TBD",
+      "events": [
+        {
+          "name": "Conference (estimated)",
+          "date": "2026-11-15",
+          "type": "conference",
+          "tentative": true,
+          "source": "https://aaclnet.org/",
+          "footnote": 8
+        },
+        {
+          "name": "Conference End (estimated)",
+          "date": "2026-11-20",
+          "type": "conference",
+          "tentative": true,
+          "source": "https://aaclnet.org/",
+          "footnote": 8
+        }
+      ],
+      "note": "Official dates and location not yet announced, typically held in November or December"
+    }
+  ],
+  "footnotes": [
+    {
+      "id": 1,
+      "text": "ICLR 2026 Official Dates and Deadlines",
+      "url": "https://iclr.cc/Conferences/2026/Dates"
+    },
+    {
+      "id": 2,
+      "text": "EACL 2026 Call for Main Conference Papers",
+      "url": "https://2026.eacl.org/calls/papers/"
+    },
+    {
+      "id": 3,
+      "text": "ACL 2026 Call for Main Conference Papers",
+      "url": "https://2026.aclweb.org/calls/main_conference_papers/"
+    },
+    {
+      "id": 4,
+      "text": "ICML 2026 Tentative Dates (Conference Inc.)",
+      "url": "https://conferenceinc.net/post/icml-2026/"
+    },
+    {
+      "id": 5,
+      "text": "ICML 2026 Official Dates Page",
+      "url": "https://icml.cc/Conferences/2026/Dates"
+    },
+    {
+      "id": 6,
+      "text": "NeurIPS 2026 - AI Conference Deadlines",
+      "url": "https://mlciv.com/ai-deadlines/conference/?id=neurips26"
+    },
+    {
+      "id": 7,
+      "text": "EMNLP 2026 - WikiCFP",
+      "url": "http://www.wikicfp.com/cfp/program?id=883"
+    },
+    {
+      "id": 8,
+      "text": "AACL Official Website",
+      "url": "https://aaclnet.org/"
+    },
+    {
+      "id": 9,
+      "text": "COLM 2025 Key Dates (2026 dates based on 2025 schedule)",
+      "url": "https://colmweb.org/dates.html"
+    },
+    {
+      "id": 10,
+      "text": "ICLR 2025 Official Dates and Deadlines",
+      "url": "https://iclr.cc/Conferences/2025/Dates"
+    },
+    {
+      "id": 11,
+      "text": "NAACL 2025 Official Website",
+      "url": "https://2025.naacl.org/"
+    },
+    {
+      "id": 12,
+      "text": "ICML 2025 Official Dates and Deadlines",
+      "url": "https://icml.cc/Conferences/2025/Dates"
+    },
+    {
+      "id": 13,
+      "text": "ACL 2025 Official Website",
+      "url": "https://2025.aclweb.org/"
+    },
+    {
+      "id": 14,
+      "text": "COLM 2025 Key Dates",
+      "url": "https://colmweb.org/dates.html"
+    },
+    {
+      "id": 15,
+      "text": "EMNLP 2025 Official Website",
+      "url": "https://2025.emnlp.org/"
+    },
+    {
+      "id": 16,
+      "text": "NeurIPS 2025 Official Dates and Deadlines",
+      "url": "https://neurips.cc/Conferences/2025/Dates"
+    }
+  ],
+  "metadata": {
+    "created": "2025-10-16",
+    "note": "Some conferences have not yet announced official dates. Tentative dates are marked and based on historical patterns or unofficial sources."
+  }
+}
