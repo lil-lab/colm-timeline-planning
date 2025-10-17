@@ -279,8 +279,78 @@
       "location": "San Diego, California",
       "events": [
         {
+          "name": "Abstract Deadline",
+          "date": "2025-05-11",
+          "type": "deadline",
+          "source": "https://neurips.cc/Conferences/2025/Dates",
+          "footnote": 16
+        },
+        {
           "name": "Full Paper Deadline",
           "date": "2025-05-15",
+          "type": "deadline",
+          "source": "https://neurips.cc/Conferences/2025/Dates",
+          "footnote": 16
+        },
+        {
+          "name": "Supplemental Material Deadline",
+          "date": "2025-05-22",
+          "type": "deadline",
+          "source": "https://neurips.cc/Conferences/2025/Dates",
+          "footnote": 16
+        },
+        {
+          "name": "Reviewing Period Start",
+          "date": "2025-05-29",
+          "type": "review",
+          "source": "https://neurips.cc/Conferences/2025/Dates",
+          "footnote": 16
+        },
+        {
+          "name": "Reviewing Period End",
+          "date": "2025-07-02",
+          "type": "review",
+          "source": "https://neurips.cc/Conferences/2025/Dates",
+          "footnote": 16
+        },
+        {
+          "name": "Rebuttal Period Start",
+          "date": "2025-07-24",
+          "type": "review",
+          "source": "https://neurips.cc/Conferences/2025/Dates",
+          "footnote": 16
+        },
+        {
+          "name": "Rebuttal Period End",
+          "date": "2025-07-30",
+          "type": "review",
+          "source": "https://neurips.cc/Conferences/2025/Dates",
+          "footnote": 16
+        },
+        {
+          "name": "Reviewer-Author Discussion Start",
+          "date": "2025-07-31",
+          "type": "review",
+          "source": "https://neurips.cc/Conferences/2025/Dates",
+          "footnote": 16
+        },
+        {
+          "name": "Reviewer-Author Discussion End",
+          "date": "2025-08-06",
+          "type": "review",
+          "source": "https://neurips.cc/Conferences/2025/Dates",
+          "footnote": 16
+        },
+        {
+          "name": "Notification Date",
+          "date": "2025-09-18",
+          "type": "notification",
+          "source": "https://neurips.cc/Conferences/2025/Dates",
+          "footnote": 16
+        },
+        {
+          "name": "Camera-Ready Deadline",
+          "date": "2025-10-23",
           "type": "deadline",
           "source": "https://neurips.cc/Conferences/2025/Dates",
           "footnote": 16
