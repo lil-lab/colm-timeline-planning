@@ -252,6 +252,9 @@
                 <div class="legend-color" style="background: #3b82f6;"></div>
                 <span>Conference Dates</span>
             </div>
+            <div class="legend-item" style="border-left: 2px solid #ffc107; padding-left: 10px; margin-left: 10px;">
+                <span style="font-weight: bold;">* = Contains tentative/estimated dates</span>
+            </div>
         </div>
 
         <div class="footnotes">
@@ -311,10 +314,14 @@
             });
 
             // Create groups for each conference
-            const groups = sortedConferences.map((conf, index) => ({
-                id: index,
-                content: conf.name
-            }));
+            const groups = sortedConferences.map((conf, index) => {
+                // Check if conference has any tentative dates
+                const hasTentativeDates = conf.events.some(event => event.tentative);
+                return {
+                    id: index,
+                    content: conf.name + (hasTentativeDates ? ' *' : '')
+                };
+            });
 
             // Create items for timeline
             const items = [];
